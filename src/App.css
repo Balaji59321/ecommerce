@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  background-color: rgb(220, 219, 195);
+}
