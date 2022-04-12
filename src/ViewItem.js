@@ -60,25 +60,31 @@ function ViewItem() {
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
             backgroundColor: "#eee",
             borderRadius: 5,
-            width: "60%",
+            width: { xs: "90%", sm: "80%", md: "60%" },
+
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
             margin: "auto",
-            gap: 10,
+            gap: { xs: 2, sm: 3, md: 10 },
             position: "absolute",
             zIndex: "1045",
           }}
           py={5}
-          px={4}
+          px={{ xs: 1, sm: 2, md: 4 }}
         >
           <ImageListItem>
             <img
               src={val["image"]}
-              style={{ borderRadius: 10, objectFit: "cover", height: "400px" }}
+              style={{
+                borderRadius: 10,
+                objectFit: "cover",
+                height: { xs: "200px", sm: "200px", md: "400px" },
+              }}
               alt="product-item"
             />
           </ImageListItem>
@@ -98,14 +104,29 @@ function ViewItem() {
               </Typography>
               <hr />
               <Typography variant="p">{val["description"]}</Typography>
-              <Box sx={{ display: "flex", alignItems: "center" }} py={2}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: { xs: "column", sm: "column" },
+                  overflow: "wrap",
+                  justifyContent: "center",
+                }}
+                py={2}
+              >
                 <Typography>Color Shades</Typography>
-                <Radio name="radio-btn" color="default" checked />
-                Grey
-                <Radio name="radio-btn" color="success" checked />
-                Green
-                <Radio name="radio-btn" color="secondary" checked />
-                Violet
+                <Box>
+                  <Radio name="radio-btn" color="default" checked />
+                  Grey
+                </Box>
+                <Box>
+                  <Radio name="radio-btn" color="success" checked />
+                  Green
+                </Box>
+                <Box>
+                  <Radio name="radio-btn" color="secondary" checked />
+                  Violet
+                </Box>
               </Box>
             </section>
             <section>

@@ -46,7 +46,7 @@ function Create() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: "40%",
+        width: { xs: "90%", sm: "80%", md: "60%", lg: "40%" },
         margin: "auto",
         gap: 3,
       }}

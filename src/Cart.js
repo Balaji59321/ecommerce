@@ -31,7 +31,10 @@ function Cart() {
             <Typography>
               <strong>
                 Total Amount in ($):{" "}
-                {state.items.reduce((acc, ele) => ele.quantity * ele.price, 0)}
+                {state.items.reduce(
+                  (acc, ele) => acc + ele.quantity * ele.price,
+                  0
+                )}
               </strong>
             </Typography>
           </Box>
