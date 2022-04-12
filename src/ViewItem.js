@@ -65,7 +65,6 @@ function ViewItem() {
             backgroundColor: "#eee",
             borderRadius: 5,
             width: { xs: "90%", sm: "80%", md: "60%" },
-
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
